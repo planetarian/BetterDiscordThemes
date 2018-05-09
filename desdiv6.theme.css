@@ -1,0 +1,355 @@
+//META{"name":"KanColle DesDiv6 Compact","description":"Compact purple-hued theme featuring the charming young ladies from KanColle's Destroyer Division 6.","author":"Chami","version":"1.0"}*//
+
+/* root container background image */
+
+.container-2lgZY8 {
+    background: url("http://pirocast.net/images_private/bg_6desdiv02.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* side panels (channels/users) */
+.container-PNkimc,
+.channels-Ie2l6A,
+.theme-dark .members-1998pB {
+    background-color: transparent;
+    background: rgba(47, 49, 54, 0.25);
+}
+
+/* chat pane & users panel */
+.theme-dark .title-3qD0b-,
+.theme-dark .messages-wrapper,
+.theme-dark .chat,
+.theme-dark .chat > .content,
+.theme-dark .chat form,
+.theme-dark .headerBar-UHpsPw,
+.theme-dark .friends-table,
+.theme-dark #friends {
+    background-color: transparent;
+    background: rgba(54, 57, 62, 0.25);
+}
+
+
+
+/* servers bar (left) */
+
+/* narrow servers bar */
+.guilds-wrapper,
+.container-iksrDt /*?*/ {
+    width: 52px;
+    background-color: transparent;
+    background: rgba(32, 34, 37, 0.75);
+}
+
+/* scoots the server icons to the left */
+.guilds-wrapper .guilds {
+    padding: 5px 0px 5px 6px;
+}
+
+/* BD public servers button */
+#bd-pub-button {
+    width: 39px;
+}
+
+/* selected guild highlight */
+.guilds-wrapper .guilds .guild.selected:before {
+    border-radius: 0px;
+    background: #545;/*aaa*/
+    position: absolute;
+    width: 52px;/*6*//*52*/
+    height: 48px;
+    left: -6px;/*-8*/
+    top: 16px;
+}
+
+/* compacts the server icons */
+.guild-inner,
+.guilds-wrapper .guilds .guild,
+.guilds-wrapper .guilds .guild .guilds-error {
+    height: 40px;
+}
+
+/* fixes server icon masks */
+.guilds-wrapper .guilds .friends-online,
+.guilds-wrapper .guilds .guild-separator,
+.guilds-wrapper .guilds .guild,
+.guilds-wrapper .guilds .guild .guilds-error {
+    width: 40px;
+}
+
+/* down servers */
+.guilds-wrapper .guilds .guild .guilds-error {
+    line-height: 36px;
+}
+
+/* fixes friends icon size/pos */
+.guild .friends-icon{
+    background-size: 30px 30px !important;
+    width: 40px !important;
+    height: 42px !important;
+}
+
+/* fixes server icon sizes */
+.guilds-wrapper .guilds .guild .avatar-small {
+    background-size: 40px 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* server separators plugin */
+/* reduces space usage */
+.guild[separator] {
+    margin-bottom: 19px;
+}
+
+.guild[separator]::after {
+    bottom: -10px;
+}
+
+
+
+/* channels list panel (left) */
+
+/* server name header bar */
+.header-2o-2hj {
+    height: 32px;
+    padding: 0 6px 0 10px;
+}
+
+/* reduce server name header font size */
+/*.name-3gtcmp {    
+    font-size: 75%;
+}*/
+
+/* narrow channels list panel */
+.channels-Ie2l6A {
+    width: 131px;
+}
+
+/* channels list group headers */
+.nameDefault-2DI02H {
+    font-size: 70%;
+}
+
+/* channels list item spacing */
+.wrapper-KpKNwI {
+    height: 28px;
+}
+
+/* channels list item inner spacing */
+.content-20Aix8 {
+    height: 24px;
+    margin: 1px 0 1px 4px;
+    padding: 0 4px;
+}
+
+/* channels/voice text */
+.name-3M0b8v {
+    font-size: 85%;
+}
+
+/* voice channels/items padding removal */
+.listDefault-36Sktb {
+    padding: 0px;
+}
+
+/* voice channel members */
+.nameDefault-2s3kbY {
+    font-size: 70%;
+    color: #bbb;
+}
+
+/* user actions footer */
+/* footer size */
+.container-iksrDt {
+    height: 44px;
+}
+
+/* user mic/phones/gear icons (bottom-left) */
+.button-2b6hmh {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+/* channel/chat pane (mid) */
+
+/* channel header bar */
+.title-3qD0b-,
+.headerBar-UHpsPw,
+.search-bar {
+    height: 32px !important;
+}
+
+/* adds a bit of space below chat */
+.messages {
+    padding-bottom: 20px;
+}
+
+/* space between messages */
+.message-group {
+    padding: 10px 0;
+}
+
+/* enhance visibility of links, mentions, reactions */
+.theme-dark .message-group a,
+.mention,
+.reaction-me div {
+    color: #bf96df !important;
+}
+
+/* chat input box */
+/* compact attach button */
+.attachButton-1UjEWA {
+    margin: 5px 0 5px 5px;
+}
+
+/* center emoji button */
+.emojiButton-3uL3Aw {
+    right: 7px;
+    top: 6px;
+}
+
+/* textbox left/right space */
+.chat form {
+    margin: 0 5px;
+}
+
+/* textbox top/bottom space */
+.channelTextArea-1LDbYG {
+    margin: 5px 0 5px;
+}
+
+/* textbox padding */
+.textAreaEnabled-3vQ5WZ {
+    padding: 5px 38px 5px 0;
+}
+
+/* user(s) typing tip */
+.theme-dark .typing-2GQL18 {
+    background-color: #252535;
+    opacity: 0.8;
+    height: 16px;
+    position: absolute;
+    top: -11px;
+    padding-left: 43px;
+}
+
+
+/* user(s) typing tip ellipsis */
+.text-1y-e8-, .ellipsis-19qdx6 {
+    font-size: 90%;
+    margin-top: -5px;
+    height: 20px;
+    padding-right: 4px;
+    opacity: 0.75;
+}
+
+
+
+/* channel users panel (right) */
+
+/* narrow panel */
+.membersWrap-2h-GB4 {
+    min-width: 130px;
+}
+
+/* users inner container */
+.members-1998pB {
+    max-width: 130px;
+}
+
+/* users list group headers */
+.membersGroup-v9BXpm {
+}
+
+/* users list item spacing */
+.member-3W1lQa{
+    padding: 5px 16px 5px 0px;
+    height: 32px;
+}
+
+/* remove users list item padding */
+.content-OzHfo4 {
+    padding: 0px;
+}
+
+/* users list item avatars */
+.avatar-small,
+.avatarWrapper-3B0ndJ .avatar-16XVId {
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+}
+
+/* users list item font size */
+.username-1cB_5E {
+    font-size: 80%;
+}
+
+
+
+/* friends list (left) */
+
+/* friends search bar */
+.search-bar input {
+    height: 20px;
+    font-size: 10px;
+    padding: 0px;
+}
+
+/* reduces empty space above friends */
+.scroller-2FKFPG {
+    padding-top: 7px !important;
+}
+
+/* compacts friends list items */
+.channel {
+    height: 34px !important;
+    padding: 0px;
+}
+
+/* inner friends list item container */
+.channel a {
+    height: 32px !important;
+}
+
+.channel-name {
+    font-size: 85% !important;
+}
+
+
+
+/* online friends (mid) */
+
+/* connects the online friends panel
+with header */
+.friends-table {
+    margin-top: 0px !important;
+    padding-top: 8px;
+}
+
+/* reduces online friends item height */
+.friends-row {
+    height: 40px !important;
+}
+
+
+
+/* user details flyout */
+
+/* user details avatar */
+.avatarWrapper-3H_478 .avatar-16XVId,
+.avatarWrapper-3H_478 .avatar-16XVId .image-33JSyf,
+.maskProfile-1ObLFT {
+	height: 128px;
+    width: 128px;
+    -webkit-mask-size: 128px;
+}
+
+/* user details avatar status icon */
+.avatarWrapper-3H_478 .avatar-16XVId .status-oxiHuE {
+    width: 32px;
+    height: 32px;
+}
