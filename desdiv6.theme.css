@@ -1,11 +1,26 @@
-//META{"name":"KanColle DesDiv6 Compact","description":"Compact purple-hued theme featuring the charming young ladies from KanColle's Destroyer Division 6.","author":"Chami","version":"1.0"}*//
+//META{"name":"KanColleDesDiv6","description":"Compact purple-hued theme featuring the charming young ladies from KanColle's Destroyer Division 6.","author":"Chami","version":"1.0"}*//
 
 /* root container background image */
 
-.container-2lgZY8 {
-    background: url("https://raw.githubusercontent.com/planetarian/DiscordThemes/master/Assets/bg_6desdiv02.png");
+#app-mount {
+    background: url("https://raw.githubusercontent.com/planetarian/DiscordThemes/master/Assets/bg_6desdiv01.png");
     background-position: center;
     background-size: cover;
+}
+
+.titleBar-AC4pGV {
+    margin-top: 0;
+    padding-top: 4px;
+    background: rgba(5,0,15,.95);
+}
+
+.theme-dark .layer-3QrUeG,
+.theme-dark .layers-3iHuyZ {
+    background: transparent;
+}
+
+.container-2lgZY8 {
+    background: rgba(3,0,15,.87);
 }
 
 /* side panels (channels/users) */
@@ -13,37 +28,46 @@
 .channels-Ie2l6A,
 .theme-dark .members-1998pB {
     background-color: transparent;
-    background: rgba(47, 49, 54, 0.25);
+    background: rgba(0, 0, 0, 0.125);
+    /*background: rgba(0, 49, 54, 0.25);*/
 }
 
 /* chat pane & users panel */
 .theme-dark .title-3qD0b-,
-.theme-dark .messages-wrapper,
-.theme-dark .chat,
-.theme-dark .chat > .content,
-.theme-dark .chat form,
+.theme-dark .messagesWrapper-3lZDfY,
+.theme-dark .chat-3bRxxu,
+.theme-dark .chat-3bRxxu > .content-yTz4x3,
+.theme-dark .chat-3bRxxu form,
 .theme-dark .headerBar-UHpsPw,
 .theme-dark .friends-table,
 .theme-dark #friends {
     background-color: transparent;
-    background: rgba(54, 57, 62, 0.25);
+    /*background: rgba(0, 57, 62, 0.25);*/
 }
 
 
 
 /* servers bar (left) */
 
+
 /* narrow servers bar */
-.guilds-wrapper,
-.container-iksrDt /*?*/ {
-    width: 52px;
+.theme-dark .guildsWrapper-5TJh6A,
+.guildsWrapper-5TJh6A {
+    width: 48px;
     background-color: transparent;
-    background: rgba(32, 34, 37, 0.75);
+    background: rgba(0,0,0,.5);
+    /*background: rgba(0, 34, 37, 0.75);*/
+}
+
+/* servers container */
+.guildsWrapper-5TJh6A .scroller-wrap {
+    width: 62px;
 }
 
 /* scoots the server icons to the left */
-.guilds-wrapper .guilds {
-    padding: 5px 0px 5px 6px;
+.guildsWrapper-5TJh6A .guilds-1q_RqH {
+    padding-top: 5px;
+    padding-left: 4px;
 }
 
 /* BD public servers button */
@@ -52,45 +76,58 @@
 }
 
 /* selected guild highlight */
-.guilds-wrapper .guilds .guild.selected:before {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.unread-qLkInr:before {
     border-radius: 0px;
-    background: #545;/*aaa*/
+    opacity: 1;
     position: absolute;
-    width: 52px;/*6*//*52*/
+    width: 48px;/*6*//*52*/
     height: 48px;
-    left: -6px;/*-8*/
+    left: -4px;/*-8*/
+    background: #a5c;/*aaa*/
+    top: 2px;
+}
+
+/* selected guild highlight */
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before {
+    border-radius: 0px;
+    opacity: 1;
+    position: absolute;
+    width: 48px;/*6*//*52*/
+    height: 48px;
+    left: -4px;/*-8*/
+    background: #545;/*aaa*/
     top: 16px;
 }
 
 /* compacts the server icons */
-.guild-inner,
-.guilds-wrapper .guilds .guild,
-.guilds-wrapper .guilds .guild .guilds-error {
+.guildInner-3DSoA4,
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ,
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
     height: 40px;
 }
 
 /* fixes server icon masks */
-.guilds-wrapper .guilds .friends-online,
-.guilds-wrapper .guilds .guild-separator,
-.guilds-wrapper .guilds .guild,
-.guilds-wrapper .guilds .guild .guilds-error {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .friends-online,
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-separator,
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ,
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
     width: 40px;
 }
 
 /* down servers */
-.guilds-wrapper .guilds .guild .guilds-error {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
     line-height: 36px;
 }
 
 /* fixes friends icon size/pos */
-.guild .friends-icon{
+.guild-1EfMGQ .friends-icon{
     background-size: 30px 30px !important;
     width: 40px !important;
     height: 42px !important;
 }
 
 /* fixes server icon sizes */
-.guilds-wrapper .guilds .guild .avatar-small {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guildIcon-CT-ZDq {
     background-size: 40px 40px !important;
     width: 40px !important;
     height: 40px !important;
@@ -98,11 +135,11 @@
 
 /* server separators plugin */
 /* reduces space usage */
-.guild[separator] {
+.guild-1EfMGQ[separator] {
     margin-bottom: 19px;
 }
 
-.guild[separator]::after {
+.guild-1EfMGQ[separator]::after {
     bottom: -10px;
 }
 
@@ -161,7 +198,7 @@
 
 /* user actions footer */
 /* footer size */
-.container-iksrDt {
+.container-2Thooq {
     height: 44px;
 }
 
@@ -188,12 +225,17 @@
 }
 
 /* space between messages */
-.message-group {
-    padding: 10px 0;
+.container-1YxwTf {
+    padding: 8px 0;
+    margin-bottom: 0;
+}
+
+.containerCozy-jafyvG .dividerEnabled-2TTlcf {
+    margin: 10px 10px -10px;
 }
 
 /* enhance visibility of links, mentions, reactions */
-.theme-dark .message-group a,
+.theme-dark .container-1YxwTf a,
 .mention,
 .reaction-me div {
     color: #bf96df !important;
@@ -203,16 +245,27 @@
 /* compact attach button */
 .attachButton-1UjEWA {
     margin: 5px 0 5px 5px;
+    padding: 0;
+}
+
+/* add a bit of space around the divider */
+.attachButtonDivider-3Glu60 {
+    margin: 0 5px;
+}
+
+/* translate plugin button */
+.translate-button {
+    top: 8px;
 }
 
 /* center emoji button */
 .emojiButton-3uL3Aw {
     right: 7px;
-    top: 6px;
+    top: 8px;
 }
 
 /* textbox left/right space */
-.chat form {
+.chat-3bRxxu form {
     margin: 0 5px;
 }
 
@@ -222,7 +275,7 @@
 }
 
 /* textbox padding */
-.textAreaEnabled-3vQ5WZ {
+.textArea-2Spzkt {
     padding: 5px 38px 5px 0;
 }
 
@@ -232,7 +285,7 @@
     opacity: 0.8;
     height: 16px;
     position: absolute;
-    top: -11px;
+    top: 8px;
     padding-left: 43px;
 }
 
@@ -340,8 +393,10 @@ with header */
 /* user details flyout */
 
 /* user details avatar */
+.avatarWrapper-3H_478 .wrapper-2F3Zv8,
 .avatarWrapper-3H_478 .avatar-16XVId,
 .avatarWrapper-3H_478 .avatar-16XVId .image-33JSyf,
+.avatar-3EQepX, /* profile details avatar */
 .maskProfile-1ObLFT {
 	height: 128px;
     width: 128px;
@@ -349,7 +404,24 @@ with header */
 }
 
 /* user details avatar status icon */
-.avatarWrapper-3H_478 .avatar-16XVId .status-oxiHuE {
+.avatarWrapper-3H_478 .wrapper-2F3Zv8 .status-oxiHuE,
+.avatar-3EQepX .status-oxiHuE {
     width: 32px;
     height: 32px;
+}
+
+
+/* image viewer */
+
+.imageWrapper-2p5ogY {
+    display: block;
+}
+
+.downloadLink-1ywL9o {
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+.bip-container .inner-1JeGVc .scrollerWrap-2lJEkd {
+    display: inline;
 }
