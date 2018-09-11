@@ -102,7 +102,7 @@
 /* compacts the server icons */
 .guildInner-3DSoA4,
 .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ,
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guildsError-3cFMtY {
     height: 40px;
 }
 
@@ -110,12 +110,12 @@
 .guildsWrapper-5TJh6A .guilds-1q_RqH .friends-online,
 .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-separator,
 .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ,
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guildsError-3cFMtY {
     width: 40px;
 }
 
 /* down servers */
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guilds-error {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ .guildsError-3cFMtY {
     line-height: 36px;
 }
 
