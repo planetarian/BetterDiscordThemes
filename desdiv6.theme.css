@@ -1,4 +1,4 @@
-//META{"name":"KanColleDesDiv6","description":"Compact purple-hued theme featuring the charming young ladies from KanColle's Destroyer Division 6.","author":"Chami","version":"1.0"}*//
+//META{"name":"KanColleDesDiv6","description":"Compact purple-hued theme featuring the charming young ladies from KanColle's Destroyer Division 6.","author":"Chami","version":"2.0"}*//
 
 /* root container background image */
 
@@ -15,21 +15,29 @@
 }
 
 .theme-dark .layer-3QrUeG,
-.theme-dark .layers-3iHuyZ {
+.theme-dark .layers-3iHuyZ,
+.theme-light .layer-3QrUeG,
+.theme-light .layers-3iHuyZ {
     background: transparent;
 }
 
-.container-2lgZY8 {
+.theme-dark .container-2lgZY8 {
     background: rgba(3,0,15,.87);
+}
+.theme-light .container-2lgZY8 {
+    background: rgba(243,240,255,.87);
 }
 
 /* side panels (channels/users) */
-.container-PNkimc,
-.channels-Ie2l6A,
+.theme-dark .container-PNkimc,
+.theme-dark .channels-Ie2l6A,
 .theme-dark .members-1998pB {
-    background-color: transparent;
     background: rgba(0, 0, 0, 0.125);
-    /*background: rgba(0, 49, 54, 0.25);*/
+}
+.theme-light .container-PNkimc,
+.theme-light .channels-Ie2l6A,
+.theme-light .members-1998pB {
+    background: rgba(255, 255, 255, 0.125);
 }
 
 /* chat pane & users panel */
@@ -42,7 +50,16 @@
 .theme-dark .friends-table,
 .theme-dark #friends {
     background-color: transparent;
-    /*background: rgba(0, 57, 62, 0.25);*/
+}
+.theme-light .title-3qD0b-,
+.theme-light .messagesWrapper-3lZDfY,
+.theme-light .chat-3bRxxu,
+.theme-light .chat-3bRxxu > .content-yTz4x3,
+.theme-light .chat-3bRxxu form,
+.theme-light .headerBar-UHpsPw,
+.theme-light .friends-table,
+.theme-light #friends {
+    background: rgba(255,255,255,0.2);
 }
 
 
@@ -51,18 +68,14 @@
 
 
 /* narrow servers bar */
-.theme-dark .guildsWrapper-5TJh6A,
 .guildsWrapper-5TJh6A {
     width: 48px;
-    background-color: transparent;
-    background: rgba(0,0,0,.5);
-    /*background: rgba(0, 34, 37, 0.75);*/
 }
+.theme-dark .guildsWrapper-5TJh6A { background: rgba(0,0,0,.5); }
+.theme-light .guildsWrapper-5TJh6A { background: rgba(0,0,0,.05); }
 
 /* servers container */
-.guildsWrapper-5TJh6A .scroller-wrap {
-    width: 62px;
-}
+.guildsWrapper-5TJh6A .scroller-wrap { width: 62px; }
 
 /* scoots the server icons to the left */
 .guildsWrapper-5TJh6A .guilds-1q_RqH {
@@ -76,7 +89,7 @@
 }
 
 /* selected guild highlight */
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.unread-qLkInr:before {
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ:before {
     border-radius: 0px;
     opacity: 1;
     position: absolute;
@@ -88,16 +101,17 @@
 }
 
 /* selected guild highlight */
+.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.unread-qLkInr:before {
+    top: 2px;
+    background: #a5c;/*aaa*/
+}
+
+/* selected guild highlight */
 .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before {
-    border-radius: 0px;
-    opacity: 1;
-    position: absolute;
-    width: 48px;/*6*//*52*/
-    height: 48px;
-    left: -4px;/*-8*/
-    background: #545;/*aaa*/
     top: 16px;
 }
+.theme-dark .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before { background: #545; }
+.theme-light .guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before { background: #bbb; }
 
 /* compacts the server icons */
 .guildInner-3DSoA4,
@@ -154,9 +168,12 @@
 }
 
 /* reduce server name header font size */
-/*.name-3gtcmp {    
-    font-size: 75%;
-}*/
+.name-3YKhmS {
+    font-size: 85%;
+}
+.theme-light .name-3YKhmS {
+    color: black;
+}
 
 /* narrow channels list panel */
 .channels-Ie2l6A {
@@ -166,6 +183,31 @@
 /* channels list group headers */
 .nameDefault-2DI02H {
     font-size: 70%;
+}
+.theme-light .content-20Aix8 div,
+.theme-light .content-20Aix8 svg {
+    color: #aaa;
+}
+.theme-light .contentMutedText-2y6aPQ div,
+.theme-light .contentMutedText-2y6aPQ svg {
+    color: #bbb;
+    font-weight: 300;
+}
+.theme-light .contentUnreadText-2vNnZc div,
+.theme-light .contentUnreadText-2vNnZc svg {
+    color: #444;
+    font-weight: 600;
+}
+.theme-light .contentSelectedText-3wUhMi div,
+.theme-light .contentSelectedText-3wUhMi svg,
+.theme-light .private-channels .channel.selected .channel-name,
+.theme-light .private-channels .channel:hover .channel-name {
+    color: #fff;
+    font-weight: 600;
+}
+.theme-light .friendsOnline-_wi_fM,
+.theme-light .private-channels .channel-name {
+    color: #444;
 }
 
 /* channels list item spacing */
@@ -201,6 +243,8 @@
 .container-2Thooq {
     height: 44px;
 }
+.theme-dark .container-2Thooq { background: rgba(0,0,0,0.15); }
+.theme-light .container-2Thooq { background: rgba(0,0,0,.075); }
 
 /* user mic/phones/gear icons (bottom-left) */
 .button-2b6hmh {
@@ -235,7 +279,7 @@
 }
 
 /* enhance visibility of links, mentions, reactions */
-.theme-dark .container-1YxwTf a,
+.container-1YxwTf a,
 .mention,
 .reaction-me div {
     color: #bf96df !important;
